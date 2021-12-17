@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "464803dbd4b1b1c3a2fad178c6cab974",
+    "content-hash": "a0aaa70f25acfaaf0fe597791a9dd75d",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -5288,6 +5288,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/gutenberg/"
+        },
+        {
+            "name": "wpackagist-plugin/reusable-blocks-extended",
+            "version": "0.8",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/reusable-blocks-extended/",
+                "reference": "tags/0.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/reusable-blocks-extended.0.8.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/reusable-blocks-extended/"
         },
         {
             "name": "wpackagist-theme/twentytwentyone",
