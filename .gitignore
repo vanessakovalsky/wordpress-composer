@@ -1,0 +1,32 @@
+# Ignorer les dépendances
+**/node_modules/
+**/vendor/
+
+# Ignorer le répertoire wp
+wp/
+
+# Ne pas ignorer le répertoire wp-content mais ignorer son contenu
+!wp-content/
+wp-content/*
+
+# Ne pas ignorer le répertoire themes mais ignorer son contenu
+!wp-content/themes
+wp-content/themes/*
+
+# Ne pas ignorer ce thème
+!wp-content/themes/kovalibre
+!wp-content/themes/kovalibre-children
+
+# Ne pas ignorer le répertoire plugins mais ignorer son contenu
+!wp-content/plugins
+wp-content/plugins/*
+
+# Ne pas ignorer ces plugins
+!wp-content/plugins/kovalibre-social-network-widget
+
+# Ne pas ignorer le répertoire mu-plugins mais ignorer son contenu
+!wp-content/mu-plugins
+!wp-content/mu-plugins/*
+
+# on ignore le fichier de configuration
+wp-config.php

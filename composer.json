@@ -1,0 +1,81 @@
+{
+    "name": "vanessakovalsky/wordpress",
+    "description": "WordPress installation with Composer",
+    "keywords": [
+      "wordpress", "composer"
+    ],
+    "version": "1.0.0",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+      {
+        "name": "Vanessa Kovalsky",
+        "homepage": "https://www.kovalibre.com/"
+      }
+    ],
+    "type": "project",
+    "require": {
+      "composer/installers": "~1.0",
+      "wordpress/wordpress": "5.8.2",
+      "koodimonni-language/fr_fr": "*",
+      "wpackagist-theme/twentytwentyone": "*",
+      "wpackagist-plugin/akismet": "^4.2.1",
+        "wpackagist-plugin/debug-bar": "^1.1",
+        "wp-cli/wp-cli-bundle": "^2.5",
+        "wpackagist-plugin/gutenberg": "^12.1"
+    },
+    "repositories": [
+      {
+        "type": "composer",
+        "url": "https://wpackagist.org"
+      },
+      {
+        "type": "package",
+        "package": {
+          "name": "wordpress/wordpress",
+          "type": "webroot",
+          "version": "5.8.2",
+          "source": {
+            "url": "https://github.com/WordPress/WordPress.git",
+            "type": "git",
+            "reference": "5.8.2"
+          },
+          "require": {
+            "fancyguy/webroot-installer": "^1.0.0"
+          }
+        }
+      },
+      {
+        "type": "composer",
+        "url": "https://wp-languages.github.io"
+      }
+    ],
+    "config": {
+      "vendor-dir": "wp-content/vendor"
+    },
+    "extra": {
+      "installer-paths": {
+        "wp-content/plugins/{$name}/": [
+          "type:wordpress-plugin"
+        ],
+        "wp-content/themes/{$name}/": [
+          "type:wordpress-theme"
+        ]
+      },
+      "webroot-dir": "wp",
+      "webroot-package": "wordpress/wordpress",
+      "wordpress-install-dir": "wp",
+      "dropin-paths": {
+        "wp-content/languages/": [
+          "vendor:koodimonni-language"
+        ],
+        "wp-content/languages/plugins/": [
+          "vendor:koodimonni-plugin-language"
+        ],
+        "wp-content/languages/themes/": [
+          "vendor:koodimonni-theme-language"
+        ]
+      }
+    },
+    "scripts" : {
+    }
+  }
